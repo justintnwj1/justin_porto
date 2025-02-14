@@ -40,7 +40,7 @@ export default function About() {
 
                     Driven by a deep passion for programming, I am eager to further explore this dynamic field. Please feel free to reach out to discuss programming, collaborate on web or mobile projects, or explore opportunities for partnership.
 
-                    I am actively seeking new opportunities in programming and would be thrilled to hear from anyone looking to offer me a position in this exciting field.
+                    Currently, I am working as an IT Consultant at Accenture, where I am gaining valuable experience. In addition to my full-time role, I am also open to freelance opportunities and actively exploring offers in this area. I would be thrilled to discuss any freelance opportunities you may have, as I am eager to expand my expertise and contribute to new and exciting projects
                 </p>
             </div>
 
