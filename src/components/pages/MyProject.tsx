@@ -49,7 +49,6 @@ export default function MyProject() {
                 <p>Frontend (Github):
                     <a href="https://github.com/SYNRGY7-Kelompok-6/connect-bca-frontend">Link</a>
                 </p>
-
                 <p>Backend (Github):
                     <a href="https://github.com/SYNRGY7-Kelompok-6/connect-bca-backend-js">Link</a>
                     <div style={{ color: 'white'}}>Backend (Github):<a href="https://github.com/SYNRGY7-Kelompok-6/BE-Java">Link</a></div>
