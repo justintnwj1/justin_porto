@@ -1,5 +1,3 @@
-import React from "react";
-import MenuItem from '@mui/material/MenuItem';
 import whatsappImg from '../../assets/WhatsApp_icon.png';
 import gmailImg from '../../assets/gmail.png';
 import linkedinImg from '../../assets/linkedin.png';

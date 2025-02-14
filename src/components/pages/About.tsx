@@ -1,4 +1,3 @@
-import React from "react";
 import viteImg from "../../assets/vite.png";
 import htmlImg from "../../assets/html.png";
 import reactImg from "../../assets/react.png";
