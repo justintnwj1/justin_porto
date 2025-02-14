@@ -1,5 +1,3 @@
-import { colors } from "@mui/material";
-
 export default function MyProject() {
     return (
         <div className="myProjectPage">
