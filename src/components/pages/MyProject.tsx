@@ -1,3 +1,5 @@
+import { colors } from "@mui/material";
+
 export default function MyProject() {
     return (
         <div className="myProjectPage">
@@ -50,7 +52,7 @@ export default function MyProject() {
 
                 <p>Backend (Github):
                     <a href="https://github.com/SYNRGY7-Kelompok-6/connect-bca-backend-js">Link</a>
-                    <a href="https://github.com/SYNRGY7-Kelompok-6/BE-Java">Link</a>
+                    <div style={{ color: 'white'}}>Backend (Github):<a href="https://github.com/SYNRGY7-Kelompok-6/BE-Java">Link</a></div>
                 </p>
             </div>
             <div>
