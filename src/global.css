@@ -1,0 +1,92 @@
+.offcanvas-title,
+.portofolio {
+    color: white;
+    font-family: 'Futura', Arial, sans-serif;
+}
+
+.imageLogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.logo-img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.borderAbout {
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('/path-to-your-fonts/futura.woff2') format('woff2'),
+        url('/path-to-your-fonts/futura.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura-Bold';
+    src: url('/path-to-your-fonts/futura.woff2') format('woff2'),
+        url('/path-to-your-fonts/futura.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.about {
+    background-color: #A7C7E7;
+    border-radius: 10px;
+    text-align: left;
+    padding: 18px;
+    margin-bottom: 24px;
+}
+
+.aboutPage {
+    margin: 24px;
+    font-family: 'Futura', Arial, sans-serif;
+}
+
+.myProjectPage {
+    margin: 24px;
+    font-family: 'Futura', Arial, sans-serif;
+}
+
+.myProjectHeader {
+    background-color: #A7C7E7;
+    border-radius: 10px;
+    padding: 10px 5px;
+}
+
+.contactPage {
+    margin: 24px;
+    font-family: 'Futura', Arial, sans-serif;
+}
+
+.pictureContact{
+    margin-bottom: 10px;
+}
+
+.imagePicture {
+    margin-right: 10px;
+}
+
+button.navbar-toggler {
+    border-style: none;
+}
+
+@media only screen and (min-width:992px) {
+
+    .navbar-nav,
+    .offcanvas-title {
+        color: white;
+    }
+}
