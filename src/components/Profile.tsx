@@ -6,8 +6,8 @@ import { faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-
 
 const Profile = () => {
     const jobTitles = ['Web Developer', 'Consultant', 'Backend Developer'];
-    const [currentTitle, setCurrentTitle] = useState(jobTitles[0]);
     const [index, setIndex] = useState(0);
+    const [currentTitle, setCurrentTitle] = useState(jobTitles[index]);
     const links = [
         {
             icon: faLinkedin,

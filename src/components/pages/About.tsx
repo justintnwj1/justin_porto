@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import './pages.css';
 import bca from '../../assets/bca.png';
 import acn from '../../assets/acn.png';

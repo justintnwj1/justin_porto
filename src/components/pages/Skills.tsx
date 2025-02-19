@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5, faCss, faJs, faPython, faNode, faReact } from '@fortawesome/free-brands-svg-icons';
@@ -37,7 +36,7 @@ const Skills = () => {
     const textCenter = (value: string) => ({
         id: 'textCenter',
         beforeDatasetsDraw(chart: any) {
-            const { ctx, data } = chart;
+            const { ctx } = chart;
             ctx.save();
             ctx.font = '2rem Pacifico';
             ctx.fillStyle = '#000f3f';
