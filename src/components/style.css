@@ -1,0 +1,132 @@
+.background {
+    display: flex;
+}
+
+.navigation {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 11%;
+}
+.navBar {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color1);
+    cursor: pointer;
+}
+
+.iconBar {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.iconBar:hover {
+    background-color: rgba(0, 15, 63, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.navList {
+    margin-top: 20px;
+    font-size: 36px;
+    color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    height: 290px;
+    background-color: var(--color2);
+    border-radius: 10px;
+    align-items: center;
+    max-height: 0;
+    /* Mulai dengan tinggi 0 */
+    overflow: hidden;
+    /* Sembunyikan elemen yang melampaui batas */
+    transition: max-height 0.3s ease-in-out;/
+}
+
+.navList.visible {
+    max-height: 290px; /* Sesuaikan max-height sesuai kebutuhan (sesuai dengan tinggi konten) */
+  }
+
+.iconList {
+    width: 60px;
+    height: 60px;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.iconList:hover {
+    background-color: rgba(0, 15, 63, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.iconList.active {
+    background-color: rgba(0, 15, 63, 0.2);
+  }
+
+.profile {
+    width: 290px;
+    margin-top: 10%;
+    font-family: 'Pacifico', cursive;
+}
+
+.profileContainer {
+    width: 280px;
+    height: 420px;
+    background-color: var(--color2);
+    margin-left: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.picture img {
+    width: 280px;
+    height: 310px;
+    clip-path: polygon(-400% 0%, 50% 100%, 500% 0%); /* Membentuk segitiga di bawah */
+    border-radius: 10px;
+}
+
+.name {
+    margin-top: 10px;
+}
+
+.socialMedia {
+    display: flex;
+    gap: 10px;
+}
+
+.iconSocMed {
+    font-size: 1.5rem;
+}
+
+.iconSocMed a {
+    color: var(--color1);
+}
+
+.contain {
+    width: 55vw;
+    height: 70vh;
+    background-color: var(--color2);
+    margin-top: 10%;
+    margin-left: 5px;
+    border-radius: 10px;
+}

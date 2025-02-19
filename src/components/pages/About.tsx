@@ -1,61 +1,59 @@
-import viteImg from "../../assets/vite.png";
-import htmlImg from "../../assets/html.png";
-import reactImg from "../../assets/react.png";
-import jwtImg from "../../assets/jwt.png";
-import pythonImg from "../../assets/python.png";
-import koyebImg from "../../assets/koyeb.png";
-import vercelImg from "../../assets/vercel.png";
-import nodeImg from "../../assets/node.png";
-import expressImg from "../../assets/express.png";
-import bootstrapImg from "../../assets/bootstrap.png";
-import postImg from "../../assets/post.png";
-import githubImg from "../../assets/github.png";
+import { useState, useEffect } from 'react';
+import './pages.css';
+import bca from '../../assets/bca.png';
+import acn from '../../assets/acn.png';
+import trisakti from '../../assets/trisakti.png';
 
-export default function About() {
-    const imageSources = [
-        htmlImg,
-        pythonImg,
-        expressImg,
-        nodeImg,
-        jwtImg,
-        reactImg,
-        viteImg,
-        bootstrapImg,
-        postImg,
-        githubImg,
-        vercelImg,
-        koyebImg,
-    ];
+interface AboutPartProps {
+    title: string;
+    image: string;
+    alt: string; 
+    className: string;
+    delay: string;
+}
+
+// Data untuk tiap bagian
+const aboutData = [
+    {
+        title: "Working At Accenture",
+        image: acn,
+        alt: "acn-logo"
+    },
+    {
+        title: "BCA Bootcamp Scholarship",
+        image: bca,
+        alt: "bca-logo"
+    },
+    {
+        title: "Graduated from Trisakti University",
+        image: trisakti,
+        alt: "trisakti-logo"
+    }
+];
+
+// Komponen AboutPart dengan tipe props
+const AboutPart = ({ title, image, alt, className, delay  }: AboutPartProps) => (
+    <div className={className} style={{ animationDelay: delay }}>
+        <h2>{title}</h2>
+        <img src={image} alt={alt} />
+    </div>
+);
+
+const About = () => {
     return (
-        <div className="aboutPage">
-            <div className="about">
-                <p>
-                    Hello I'm Justin graduted at Trisakti University, Strong professional with a Bachelor's degree focused in Engineering from Trisakti University.
-                </p>
-
-                <p>
-                    I have completed the Fullstack Web Development bootcamp at Synrgy Academy, where I mastered programming languages such as React, HTML, CSS, Python, and JavaScript. I have hands-on experience with PostgreSQL for database projects.
-
-                    I employ Bootstrap as my primary CSS framework and have developed projects using Express.js and Node.js. I'm proficient in deploying applications, utilizing platforms like Vercel and Koyeb.
-
-                    Driven by a deep passion for programming, I am eager to further explore this dynamic field. Please feel free to reach out to discuss programming, collaborate on web or mobile projects, or explore opportunities for partnership.
-
-                    Currently, I am working as an IT Consultant at Accenture, where I am gaining valuable experience. In addition to my full-time role, I am also open to freelance opportunities and actively exploring offers in this area. I would be thrilled to discuss any freelance opportunities you may have, as I am eager to expand my expertise and contribute to new and exciting projects
-                </p>
-            </div>
-
-            <div className="borderAbout">
-                
-            </div>
-
-            <div className="imageLogo">
-            {imageSources.map((src, index) => (
-                <img key={index} src={src} alt={`Logo ${index}`} className="logo-img" />
+        <div className="About">
+            {aboutData.map((item, index) => (
+                <AboutPart 
+                    key={index} 
+                    title={item.title} 
+                    image={item.image} 
+                    alt={item.alt} 
+                    className={`aboutPart${index + 1}`}
+                    delay={`${index * 1}s`} // Delay setiap elemen 1 detik berturut-turut
+                />
             ))}
         </div>
-
-        </div>
-
     );
+};
 
-}
+export default About;
