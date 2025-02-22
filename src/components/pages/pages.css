@@ -590,7 +590,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 60%;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
   }
   
   .descriptionProject {
@@ -598,7 +598,7 @@
     padding-left: 10px;
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 70px;
     border-bottom: solid 3px var(--color1);
     width: 100%;
     text-align: left;
@@ -612,7 +612,7 @@
     display: flex;
     align-items: center;
     height: auto; /* Changed from fixed height */
-    min-height: 50px; /* Added minimum height */
+    height: 70px; /* Added minimum height */
     border-bottom: solid 3px var(--color1);
     width: 95%;
     word-break: break-word; /* Handle long words */
@@ -624,7 +624,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 50px;
+    height: 70px;
     border-bottom: solid 3px var(--color1);
     max-width: 100%;
     word-break: break-word; /* Handle long words */
