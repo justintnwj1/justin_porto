@@ -1,50 +1,63 @@
 .About {
-    padding: 10px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: 'Pacifico', cursive;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Pacifico', cursive;
+  background-color: var(--color2);
+  border-radius: 10px;
 }
 
-.aboutPart1,.aboutPart2, .aboutPart3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 120px;
-    border-left: solid 0.5rem var(--color1);
-    padding-left: 0.5rem;
+.aboutPart1,
+.aboutPart2,
+.aboutPart3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  border-left: solid 0.5rem var(--color1);
+  border-bottom: solid 0.125rem var(--color3);
+  padding-left: 0.5rem;
 }
 
-.aboutPart1 img,.aboutPart3 img {
-    width: 100px;
-    height: auto;
+.aboutPart1 img,
+.aboutPart3 img {
+  width: 100px;
+  height: auto;
 }
 
-.aboutPart2 img{
-    width: 180px;
-    height: auto;
+.aboutPart2 img {
+  width: 180px;
+  height: auto;
 }
 
 /* Menambahkan animasi untuk efek fade-in atau slide-in */
-.aboutPart1,.aboutPart2, .aboutPart3  {
+.aboutPart1,
+.aboutPart2,
+.aboutPart3 {
+  opacity: 0;
+  transform: translateX(-100px);
+  /* Mengatur elemen untuk muncul dari kiri */
+  animation: fadeInLeft 1s forwards;
+  /* Menerapkan animasi slide-in */
+}
+
+/* Definisikan animasi fade-in */
+@keyframes fadeInLeft {
+  0% {
     opacity: 0;
-    transform: translateX(-100px);  /* Mengatur elemen untuk muncul dari kiri */
-    animation: fadeInLeft 1s forwards; /* Menerapkan animasi slide-in */
+    transform: translateX(-100px);
+    /* Mulai dari kiri */
   }
-  
-  /* Definisikan animasi fade-in */
-  @keyframes fadeInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-100px); /* Mulai dari kiri */
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0); /* Selesai di posisi normal */
-    }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    /* Selesai di posisi normal */
   }
+}
 
 .iconLogo {
   font-size: 2rem;
@@ -55,6 +68,8 @@
   display: flex;
   flex-wrap: wrap;
   height: 100%;
+  background-color: var(--color2);
+  border-radius: 10px;
 }
 
 .skillsParent {
@@ -65,23 +80,761 @@
   width: 25%;
 }
 
+.doughParent {
+  width: 160px;
+  height: 160px;
+  margin: 0;
+  padding: 0;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  background-color: var(--color2);
+  height: 100%;
+  border-radius: 10px;
 }
 
 .contactTitle {
-  font-family: 'Pacifico';
+  font-family: 'Pacifico', cursive;
   font-size: 3rem;
   margin-bottom: 15px;
 }
+
 .contactParent {
   display: flex;
   font-size: 3rem;
+  align-items: center;
+}
+
+.iconContact {
+  border-right: solid 4px var(--color3);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 .contactValue {
-  font-family: 'Pacifico';
+  font-family: 'Pacifico', cursive;
   margin-left: 20px;
+}
+
+.myProject {
+  padding: 10px;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  font-family: 'Pacifico', cursive;
+  background-color: var(--color2);
+  border-radius: 10px;
+}
+
+.titleProParent {
+  width: 40%;
+  height: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleProject {
+  width: 240px;
+  height: 240px;
+  border-radius: 1000px;
+  border: solid 8px var(--color1);
+  background-color: var(--color3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.borderTitleProject {
+  background-color: var(--color2);
+  border: solid 8px var(--color1);
+  width: 220px;
+  height: 220px;
+  border-radius: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentProject {
+  height: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.descProjectParent {
+  height: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.descriptionProject {
+  border-left: solid 10px var(--color3);
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border-bottom: solid 4px var(--color1);
+  width: 100%;
+  text-align: left;
+  word-break: break-word; /* Handle long words */
+}
+
+.techProject {
+  border-left: solid 10px var(--color3);
+  padding-left: 10px;
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+  height: auto; /* Changed from fixed height */
+  min-height: 80px; /* Added minimum height */
+  border-bottom: solid 4px var(--color1);
+  width: 95%;
+  word-break: break-word; /* Handle long words */
+}
+
+.githubProject {
+  border-left: solid 10px var(--color3);
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80px;
+  border-bottom: solid 4px var(--color1);
+  max-width: 100%;
+  word-break: break-word; /* Handle long words */
+}
+
+.linkProject,
+.gitProjectFrontend,
+.gitProjectBackend {
+  display: flex;
+}
+
+.titleLinkPro {
+  width: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nameLinkPro {
+  width: 75px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
+  color: var(--color1);
+}
+
+.pageLeft,.pageRight {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .About {
+    padding: 10px;
+    height: 90%;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Pacifico', cursive;
+    font-size: 0.75rem;
+  }
+  
+  .aboutPart1,
+  .aboutPart2,
+  .aboutPart3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-left: solid 0.25rem var(--color1);
+    border-bottom: solid 0.1rem var(--color3);
+    padding-left: 0.25rem;
+  }
+  
+  .aboutPart1 img,
+  .aboutPart3 img {
+    width: 40px;
+    height: auto;
+  }
+  
+  .aboutPart2 img {
+    width: 100px;
+    height: auto;
+  }
+
+  .iconLogo {
+    font-size: 1rem;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+    width: 80vw;
+  }
+  
+  .skillsParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 50%;
+  }
+
+  .doughParent {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact {
+    background-color: var(--color2);
+    height: 90%;
+    width: 80vw;
+  }
+
+  .contactTitle {
+    font-family: 'Pacifico', cursive;
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+  
+  .contactParent {
+    display: flex;
+    font-size: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .iconContact {
+    border-right: solid 2px var(--color3);
+    width: 1.25rem;
+    height: 1rem;
+  }
+  
+  .contactValue {
+    font-family: 'Pacifico', cursive;
+    margin-left: 10px;
+  }
+  
+  .myProject {
+    height: 90%;
+    width: 80vw;
+  }
+  
+  .titleProParent {
+    width: 40%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .titleProject {
+    width: 90px;
+    height: 90px;
+    border-radius: 1000px;
+    border: solid 2px var(--color1);
+    background-color: var(--color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  
+  .borderTitleProject {
+    background-color: var(--color2);
+    border: solid 2px var(--color1);
+    width: 85px;
+    height: 85px;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contentProject {
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .descProjectParent {
+    height: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    font-size: 0.5rem;
+  }
+  
+  .descriptionProject {
+    border-left: solid 4px var(--color3);
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    border-bottom: solid 2px var(--color1);
+    width: 100%;
+    text-align: left;
+    word-break: break-word; /* Handle long words */
+  }
+  
+  .techProject {
+    border-left: solid 4px var(--color3);
+    padding-left: 10px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    height: auto; /* Changed from fixed height */
+    min-height: 45px; /* Added minimum height */
+    border-bottom: solid 2px var(--color1);
+    width: 95%;
+    word-break: break-word; /* Handle long words */
+  }
+  
+  .githubProject {
+    border-left: solid 4px var(--color3);
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 45px;
+    border-bottom: solid 2px var(--color1);
+    max-width: 100%;
+    word-break: break-word; /* Handle long words */
+  }
+
+  .titleLinkPro {
+    width: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .nameLinkPro {
+    width: 40px;
+  }
+  
+  .pagination {
+    gap: 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .About {
+    padding: 10px;
+    height: 90%;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Pacifico', cursive;
+    font-size: 1rem;
+  }
+  
+  .aboutPart1,
+  .aboutPart2,
+  .aboutPart3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-left: solid 0.4rem var(--color1);
+    border-bottom: solid 0.115rem var(--color3);
+    padding-left: 0.5rem;
+  }
+  
+  .aboutPart1 img,
+  .aboutPart3 img {
+    width: 40px;
+    height: auto;
+  }
+  
+  .aboutPart2 img {
+    width: 100px;
+    height: auto;
+  }
+
+  .iconLogo {
+    font-size: 1rem;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+    width: 80vw;
+  }
+  
+  .skillsParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 50%;
+  }
+
+  .doughParent {
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact {
+    background-color: var(--color2);
+    height: 90%;
+    width: 80vw;
+  }
+
+  .contactTitle {
+    font-family: 'Pacifico', cursive;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .contactParent {
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .iconContact {
+    border-right: solid 2px var(--color3);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .contactValue {
+    font-family: 'Pacifico', cursive;
+    margin-left: 10px;
+  }
+  
+  .myProject {
+    height: 90%;
+    width: 80vw;
+  }
+  
+  .titleProParent {
+    width: 40%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .titleProject {
+    width: 140px;
+    height: 140px;
+    border-radius: 1000px;
+    border: solid 4px var(--color1);
+    background-color: var(--color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  
+  .borderTitleProject {
+    background-color: var(--color2);
+    border: solid 4px var(--color1);
+    width: 130px;
+    height: 130px;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contentProject {
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .descProjectParent {
+    height: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    font-size: 0.625rem;
+  }
+  
+  .descriptionProject {
+    border-left: solid 6px var(--color3);
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-bottom: solid 3px var(--color1);
+    width: 100%;
+    text-align: left;
+    word-break: break-word; /* Handle long words */
+  }
+  
+  .techProject {
+    border-left: solid 6px var(--color3);
+    padding-left: 10px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    height: auto; /* Changed from fixed height */
+    min-height: 50px; /* Added minimum height */
+    border-bottom: solid 3px var(--color1);
+    width: 95%;
+    word-break: break-word; /* Handle long words */
+  }
+  
+  .githubProject {
+    border-left: solid 6px var(--color3);
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+    border-bottom: solid 3px var(--color1);
+    max-width: 100%;
+    word-break: break-word; /* Handle long words */
+  }
+  
+  .pagination {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .About {
+    padding: 10px;
+    height: 90%;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.25rem;
+  }
+  
+  .aboutPart1,
+  .aboutPart2,
+  .aboutPart3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-left: solid 0.5rem var(--color1);
+    border-bottom: solid 0.125rem var(--color3);
+    padding-left: 0.5rem;
+  }
+  
+  .aboutPart1 img,
+  .aboutPart3 img {
+    width: 40px;
+    height: auto;
+  }
+  
+  .aboutPart2 img {
+    width: 100px;
+    height: auto;
+  }
+
+  .iconLogo {
+    font-size: 1.25rem;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+    width: 60vw;
+  }
+  
+  .skillsParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 50%;
+  }
+
+  .doughParent {
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact {
+    background-color: var(--color2);
+    height: 90%;
+    width: 60vw;
+  }
+
+  .contactTitle {
+    font-family: 'Pacifico', cursive;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .contactParent {
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .iconContact {
+    border-right: solid 2px var(--color3);
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .contactValue {
+    font-family: 'Pacifico', cursive;
+    margin-left: 10px;
+  }
+  
+  .myProject {
+    height: 90%;
+    width: 60vw;
+  }
+  
+  .titleProParent {
+    width: 40%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .titleProject {
+    width: 150px;
+    height: 150px;
+    border-radius: 1000px;
+    border: solid 4px var(--color1);
+    background-color: var(--color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  
+  .borderTitleProject {
+    background-color: var(--color2);
+    border: solid 4px var(--color1);
+    width: 140px;
+    height: 140px;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contentProject {
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .descProjectParent {
+    height: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    font-size: 0.75rem;
+  }
+  
+  .descriptionProject {
+    border-left: solid 6px var(--color3);
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-bottom: solid 3px var(--color1);
+    width: 100%;
+    text-align: left;
+    word-break: break-word; /* Handle long words */
+  }
+  
+  .techProject {
+    border-left: solid 6px var(--color3);
+    padding-left: 10px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    height: auto; /* Changed from fixed height */
+    min-height: 50px; /* Added minimum height */
+    border-bottom: solid 3px var(--color1);
+    width: 95%;
+    word-break: break-word; /* Handle long words */
+  }
+  
+  .githubProject {
+    border-left: solid 6px var(--color3);
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+    border-bottom: solid 3px var(--color1);
+    max-width: 100%;
+    word-break: break-word; /* Handle long words */
+  }
+  
+  .pagination {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .About {
+    font-size: 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1281px) {
+  .About {
+    font-size: 2rem;
+  }
 }

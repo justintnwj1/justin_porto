@@ -3,15 +3,13 @@
 }
 
 .navigation {
-    width: 160px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-top: 11%;
 }
+
 .navBar {
-    width: 70px;
-    height: 70px;
     border-radius: 10px;
     background-color: var(--color2);
     display: flex;
@@ -22,14 +20,11 @@
 }
 
 .iconBar {
-    width: 60px;
-    height: 60px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
 }
 
 .iconBar:hover {
@@ -40,7 +35,7 @@
 
 .navList {
     margin-top: 20px;
-    font-size: 36px;
+    font-size: 2rem;
     color: var(--color1);
     display: flex;
     flex-direction: column;
@@ -125,8 +120,487 @@
 .contain {
     width: 55vw;
     height: 70vh;
-    background-color: var(--color2);
     margin-top: 10%;
     margin-left: 5px;
     border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+    .background {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        width: auto;
+        height: 45px;
+        justify-content: center;
+    }
+
+    .navBar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .iconBar {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .navList {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 0px;
+        margin-left: 20px;
+        font-size: 1rem;
+        width: 180px;
+        height: 35px;
+        max-width: 0;
+        transition: max-width 0.3s ease-in-out;/
+    }
+    
+    .navList.visible {
+        max-width: 180px; /* Sesuaikan max-height sesuai kebutuhan (sesuai dengan tinggi konten) */
+      }
+    
+    .iconList {
+        width: 30px;
+        height: 30px;
+        margin: 0 0 0 0;
+    }
+
+    .profile {
+        width: 100vw;
+        height: 160px;
+        margin-top: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .profileContainer {
+        width: 280px;
+        height: 200px;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .profileDescContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 200px;
+        font-size: 0.75rem;
+    }
+
+    .picture {
+        height: 200px;
+        width: 60%;
+    }
+    
+    .picture img {
+        width: 100%;
+        height: 100%;
+        clip-path:  polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        object-fit: cover;
+    }
+    
+    .name {
+        margin-top: 0px;
+    }
+    
+    .iconSocMed {
+        font-size: 0.75rem;
+    }
+    
+    .contain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 45%;
+        margin-top: 0%;
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .background {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        width: auto;
+        height: 60px;
+        justify-content: center;
+    }
+
+    .navBar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .iconBar {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .navList {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 0px;
+        margin-left: 20px;
+        font-size: 1.5rem;
+        width: 210px;
+        height: 45px;
+        max-width: 0;
+        transition: max-width 0.3s ease-in-out;/
+    }
+    
+    .navList.visible {
+        max-width: 210px; /* Sesuaikan max-height sesuai kebutuhan (sesuai dengan tinggi konten) */
+      }
+    
+    .iconList {
+        width: 40px;
+        height: 40px;
+        margin: 0 0 0 0;
+    }
+
+    .profile {
+        width: 100vw;
+        height: 220px;
+        margin-top: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .profileContainer {
+        width: 340px;
+        height: 220px;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .profileDescContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 220px;
+        font-size: 0.75rem;
+    }
+
+    .picture {
+        height: 220px;
+        width: 60%;
+    }
+    
+    .picture img {
+        width: 100%;
+        height: 100%;
+        clip-path:  polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        object-fit: cover;
+    }
+    
+    .name {
+        margin-top: 0px;
+    }
+    
+    .iconSocMed {
+        font-size: 1rem;
+    }
+    
+    .contain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 45%;
+        margin-top: 0%;
+        margin-left: 0px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .background {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        width: auto;
+        height: 80px;
+        justify-content: center;
+    }
+
+    .navBar {
+        width: 65px;
+        height: 65px;
+    }
+
+    .iconBar {
+        width: 55px;
+        height: 55px;
+        font-size: 1.75rem;
+    }
+
+    .navList {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 0px;
+        margin-left: 20px;
+        font-size: 1.75rem;
+        width: 270px;
+        height: 65px;
+        max-width: 0;
+        transition: max-width 0.3s ease-in-out;/
+    }
+    
+    .navList.visible {
+        max-width: 270px; /* Sesuaikan max-height sesuai kebutuhan (sesuai dengan tinggi konten) */
+      }
+    
+    .iconList {
+        width: 55px;
+        height: 55px;
+        margin: 0 0 0 0;
+    }
+
+    .profile {
+        width: 100vw;
+        height: 220px;
+        margin-top: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .profileContainer {
+        width: 400px;
+        height: 200px;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .profileDescContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 200px;
+        font-size: 1rem;
+    }
+
+    .picture {
+        height: 200px;
+        width: 60%;
+    }
+    
+    .picture img {
+        width: 100%;
+        height: 100%;
+        clip-path:  polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        object-fit: cover;
+    }
+    
+    .name {
+        margin-top: 0px;
+    }
+    
+    .iconSocMed {
+        font-size: 1.5rem;
+    }
+    
+    .contain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 45%;
+        margin-top: 0%;
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .navigation {
+        width: 140px;
+    }
+
+    .navBar {
+        width: 65px;
+        height: 65px;
+    }
+
+    .iconBar {
+        width: 55px;
+        height: 55px;
+        font-size: 1.75rem;
+    }
+
+    .navList {
+        margin-top: 20px;
+        font-size: 1.75rem;
+        width: 65px;
+        height: 270px;
+        max-height: 0;
+    }
+    
+    .navList.visible {
+        max-height: 270px; /* Sesuaikan max-height sesuai kebutuhan (sesuai dengan tinggi konten) */
+      }
+    
+    .iconList {
+        width: 55px;
+        height: 55px;
+    }
+
+    .profile {
+        width: 250px;
+        margin-top: 10%;
+    }
+    
+    .profileContainer {
+        width: 240px;
+        height: 400px;
+        margin-left: 10px;
+    }
+
+    .profileDescContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .picture img {
+        width: 240px;
+        height: 290px;
+    }
+    
+    .name {
+        margin-top: 10px;
+    }
+    
+    .iconSocMed {
+        font-size: 1.5rem;
+    }
+    
+    .contain {
+        width: 55vw;
+        height: 70vh;
+        margin-top: 10%;
+        margin-left: 10px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1281px) {
+    .navigation {
+        width: 160px;
+    }
+
+    .navBar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .iconBar {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .navList {
+        margin-top: 20px;
+        font-size: 36px;
+        width: 70px;
+        height: 290px;
+        max-height: 0;
+    }
+    
+    .navList.visible {
+        max-height: 290px; /* Sesuaikan max-height sesuai kebutuhan (sesuai dengan tinggi konten) */
+      }
+    
+    .iconList {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .profile {
+        width: 290px;
+        margin-top: 10%;
+    }
+    
+    .profileContainer {
+        width: 280px;
+        height: 420px;
+        margin-left: 10px;
+    }
+
+    .profileDescContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .picture img {
+        width: 280px;
+        height: 310px;
+    }
+    
+    .name {
+        margin-top: 10px;
+    }
+    
+    .iconSocMed {
+        font-size: 1.5rem;
+    }
+    
+    .contain {
+        width: 55vw;
+        height: 70vh;
+        margin-top: 10%;
+        margin-left: 10px;
+    }
+    
 }

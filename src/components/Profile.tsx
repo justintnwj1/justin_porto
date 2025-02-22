@@ -40,20 +40,22 @@ const Profile = () => {
                 <div className='picture'>
                     <img src={picture} alt='profilePicture' />
                 </div>
-                <div className='name'>
-                    Justin Tanuwijaya
-                </div>
-                <div className='jobTitle'>
-                    {currentTitle}
-                </div>
-                <div className='socialMedia'>
-                    {links.map((link, index) => (
-                        <div className="iconSocMed" key={index}>
-                            <a href={link.url} target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={link.icon} />
-                            </a>
-                        </div>
-                    ))}
+                <div className='profileDescContainer'>
+                    <div className='name'>
+                        Justin Tanuwijaya
+                    </div>
+                    <div className='jobTitle'>
+                        {currentTitle}
+                    </div>
+                    <div className='socialMedia'>
+                        {links.map((link, index) => (
+                            <div className="iconSocMed" key={index}>
+                                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={link.icon} />
+                                </a>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

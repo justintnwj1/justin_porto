@@ -29,7 +29,8 @@ const Skills = () => {
         datasets: [{
             label: '',
             data: [100 - value, value],
-            backgroundColor: ['#ffffff', '#000f3f']
+            backgroundColor: ['#ffffff', '#ffd500'],
+            borderColor: ['#ffffff','#000f3f']
         }]
     });
 
@@ -37,8 +38,10 @@ const Skills = () => {
         id: 'textCenter',
         beforeDatasetsDraw(chart: any) {
             const { ctx } = chart;
+            const chartWidth = chart.width;
+            const fontSize = chartWidth / 8;
             ctx.save();
-            ctx.font = '2rem Pacifico';
+            ctx.font = `${fontSize}px Pacifico`;
             ctx.fillStyle = '#000f3f';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
@@ -51,7 +54,7 @@ const Skills = () => {
             {skills.map((link, index) => (
                 <div className='skillsParent'
                     key={index}>
-                    <div style={{ width: '160px', height: '160px', margin: '0px', padding: '0px' }}>
+                    <div className='doughParent'>
                         <Doughnut
                             data={createDonutData(link.value)}
                             plugins={[textCenter(link.percent)]}>
